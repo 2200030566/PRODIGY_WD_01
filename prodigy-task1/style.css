@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px;
+    background: #11141a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: background 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background: #343a40;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a {
+    font-size: 18px;
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #0ef;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Individual section styles */
+
+section:nth-child(1) {
+    background: #338595; /* Dark gray */
+}
+
+section:nth-child(2) {
+    background: #3b3b98; /* Purple */
+    color: #f7f7f7; /* Light text color */
+}
+
+section:nth-child(3) {
+    background: #ff5733; /* Orange */
+    color: #2e2e2e; /* Dark text color */
+}
+
+section:nth-child(4) {
+    background: #28a745; /* Green */
+    color: #f0f0f0; /* Light text color */
+}
+
+section:nth-child(5) {
+    background-color: #001f3f; /* Deep navy blue */
+    color: #f0f2f5; /* Light text color */
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    nav a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    section {
+        font-size: 40px;
+        padding: 15px;
+    }
+}
